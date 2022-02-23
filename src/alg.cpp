@@ -9,24 +9,24 @@ bool checkPrime(uint64_t value) {
       if (value % i == 0) {
         count++;
       }
-      if(count>2)
+      if (count > 2)
         return false;
     }
   return true;
 }
 
 
-uint64_t nPrime(int a[], uint64_t n) {
+uint64_t nPrime(uint64_t n) {
   int count = 0;
-  int rez =0;
+  int rez = 0;
   for (int i = 0; i < n; ++i) {
       for (int j = 1; j < 10000; ++j) {
-        if (a[i]%j == 0) {
+        if (i%j == 0) {
             count++;
         }
       }
         if (count < 3) {
-            rez = a[i];
+            rez = i;
         }
       count = 0;
     }
@@ -38,11 +38,12 @@ uint64_t nextPrime(uint64_t value) {
     for (int i = 2; i < 8; i++) {
       if (value % i == 0) {
         value++;
-      }else
+      } else
         return value;
     }
   return value;
 }
+
 
 uint64_t sumPrime(uint64_t hbound) {
   int count = 0;
