@@ -20,7 +20,7 @@ uint64_t nPrime(uint64_t n) {
   int count = 0;
   int rez = 0;
   for (int i = 0; i < n; ++i) {
-      for (int j = 1; j < 10000; ++j) {
+      for (int j = 1; j < n; ++j) {
         if (i%j == 0) {
             count++;
         }
@@ -34,14 +34,15 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-  value++;
-    for (int i = 2; i < 8; i++) {
-      if (value % i == 0) {
-        value++;
-      } else
-        return value;
-    }
-  return value;
+  while(1){
+    int c=1;
+    value++;
+      for(int i=2;i<=value;i++)
+        if(value%i==0)
+          c++;
+        if (c==2)
+          return value;
+   }
 }
 
 
