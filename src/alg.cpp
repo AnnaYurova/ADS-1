@@ -20,13 +20,14 @@ uint64_t nPrime(uint64_t n) {
   int check = -1;
   int number = 0;
   do {
-  	number++;
-  	if (checkPrime(number)){
-  		check++;
-  	}
+    number++;
+      if (checkPrime(number)){
+        check++;
+      }
   }
-  while (check < n);
+  while (check < n); {
   return number;
+  }
 }
 
 uint64_t nextPrime(uint64_t value) {
