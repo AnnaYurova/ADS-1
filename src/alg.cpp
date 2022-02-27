@@ -5,7 +5,7 @@
 
 bool checkPrime(uint64_t value) {
   int count = 0;
-    for (int i = 1; i < 8; i++) {
+    for (int i = 1; i <= 9; i++) {
       if (value % i == 0) {
         count++;
       }
@@ -42,7 +42,7 @@ uint64_t nextPrime(uint64_t value) {
 
 uint64_t sumPrime(uint64_t hbound) {
   int count = 0;
-  int sum = 0;
+  int sum = 1;
     for (int i = 2; i < hbound; ++i) {
       for (int j = 1; j < hbound; ++j) {
         if (i % j == 0) {
