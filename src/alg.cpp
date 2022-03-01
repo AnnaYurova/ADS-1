@@ -40,10 +40,10 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-  int sum = 0;
-    for (int i = 2; i < hbound; ++i) {
+  uint64_t sum = 0;
+    for (uint64_t i = 2; i < hbound; ++i) {
       bool fall = true;
-      for (int j=2; j*j <= i; ++j) {
+      for (uint64_t j=2; j*j <= i; ++j) {
             if (i % j == 0) {
                 fall = false;
             }
