@@ -4,12 +4,13 @@
 
 
 bool checkPrime(uint64_t value) {
-  int count = 0;
-    for (int i = 2; i <= (value / 2); i++) {
-      if (value % i == 0) {
-        return false;
-      }
+  if (value <= 1)
+    return false;
+  for (int i = 2; i <= (value / 2); i++) {
+    if (value % i == 0) {
+      return false;
     }
+  }
   return true;
 }
 
